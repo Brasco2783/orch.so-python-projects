@@ -1,3 +1,10 @@
+
+
+# Login with valid user_email and user_password, verify Header reads 'John Oates'
+
+
+
+
 import self
 from selenium import webdriver  # This line imports the webdriver module
 from selenium.webdriver.common.by import By
@@ -7,9 +14,6 @@ from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.chrome.service import Service
 from time import sleep
 
-
-
-# Login with valid user_email and user_password, verify Header reads 'John Oates'
 
 
 
