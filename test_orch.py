@@ -29,7 +29,7 @@ class TestGettop:
         email_input = WebDriverWait(self.browser, 10).until(
             EC.presence_of_element_located((By.XPATH, "//input[@type='email' and @class='or-input-input']"))
         )
-        email_input.send_keys("Dean75@pretreer.com")
+        email_input.send_keys("user_email")
 
         entered_text = email_input.get_attribute('value')
         print(f"Entered email: {entered_text}")
@@ -41,7 +41,7 @@ class TestGettop:
         password_input = WebDriverWait(self.browser, 10).until(
             EC.presence_of_element_located((By.XPATH, "//input[@class='or-input-input' and @type='password']"))
         )
-        password_input.send_keys('4xlOI4vb_cB0h8kY99sV')
+        password_input.send_keys('user_password')
 
         # Click 'Signin
         self.browser.find_element(By.XPATH,"//div[@class='or-button-content' and text()='Sign in']").click()
