@@ -17,7 +17,7 @@ from time import sleep
 
 
 
-class TestGettop:
+class Orchestra:
     browser = None
 
     def setup_method(self, method):
