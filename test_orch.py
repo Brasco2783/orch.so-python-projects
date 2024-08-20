@@ -8,6 +8,11 @@ from selenium.webdriver.chrome.service import Service
 from time import sleep
 
 
+
+# Login with valid user_email and user_password, verify Header reads 'John Oates'
+
+
+
 class TestGettop:
     browser = None
 
