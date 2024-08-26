@@ -22,7 +22,7 @@ from Tests.Reusable_Login_Orch import login_to_orchestra
 
 class TestOrchestra:
     def test_login(self):
-        browser = login_to_orchestra('Dean75@pretreer.com', "4xlOI4vb_cB0h8kY99sV")
+        browser = login_to_orchestra('user_email', "user_password")
 
         # Click 'task icon'
         WebDriverWait(browser, 20).until(
