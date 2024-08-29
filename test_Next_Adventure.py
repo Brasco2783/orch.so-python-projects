@@ -1,3 +1,5 @@
+# Select category, add item to shopping cart and verify price from item page is equal to item subtotal at checkout
+
 from selenium import webdriver
 from selenium.webdriver import ActionChains
 from selenium.webdriver.common.by import By
