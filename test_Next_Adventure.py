@@ -1,4 +1,3 @@
-# Select category, add item to shopping cart and verify price from item page is equal to item subtotal at checkout
 
 from selenium import webdriver
 from selenium.webdriver import ActionChains
@@ -18,6 +17,9 @@ class TestNA:
         # Install and start browser
         driver_path = ChromeDriverManager().install()
         self.browser = webdriver.Chrome(service=Service(driver_path))
+
+
+    # Select category, add item to shopping cart and verify price from item page is equal to item subtotal at checkout
 
     def test_add_to_cart(self, element=None):
         # navigate to webpage
@@ -41,6 +43,8 @@ class TestNA:
         sleep(10)
 
   def test_google_maps_directions(self):
+        # test all direction buttons direct user to google maps page
+      
         # navigate to webpage
         self.browser.get('https://nextadventure.net/')
         
