@@ -39,3 +39,51 @@ class TestNA:
 
         assert actual_results == expected_results
         sleep(10)
+
+  def test_google_maps_directions(self):
+        # navigate to webpage
+        self.browser.get('https://nextadventure.net/')
+        
+        # google map to main PDX store
+        wait_for_element(self.browser, By.XPATH, "//a[text()='Locations']").click()
+        wait_for_element(self.browser, By.XPATH, "//a[@class='sc-brPMkR hVSHHp pf-18_ pf-button-4']").click()
+        time.sleep(10)
+        self.browser.switch_to.window(self.browser.window_handles[-1])
+        expected_url = "https://www.google.com/maps/place/Next+Adventure+Portland+Outdoor+Store/"
+        actual_url = self.browser.current_url
+        assert expected_url in actual_url
+
+        self.browser.close()
+        self.browser.switch_to.window(self.browser.window_handles[0])
+
+        # google map to PDX paddle sports
+        wait_for_element(self.browser, By.XPATH, "//a[@class='sc-brPMkR hVSHHp pf-26_ pf-button-4']").click()
+        time.sleep(10)
+        self.browser.switch_to.window(self.browser.window_handles[-1])
+        expected_url = "https://www.google.com/maps/place/Next+Adventure+Portland+Paddle+Sports+Center/"
+        actual_url = self.browser.current_url
+        assert expected_url in actual_url
+
+        self.browser.close()
+        self.browser.switch_to.window(self.browser.window_handles[0])
+
+        # google map to Scappoose paddle sports
+        wait_for_element(self.browser, By.XPATH, "//a[@class='sc-brPMkR hVSHHp pf-34_ pf-button-4']").click()
+        time.sleep(10)
+        self.browser.switch_to.window(self.browser.window_handles[-1])
+        expected_url = "https://www.google.com/maps/place/Next+Adventure+Scappoose+Bay+Paddle+Sports+Center/"
+        actual_url = self.browser.current_url
+        assert expected_url in actual_url
+
+        self.browser.close()
+        self.browser.switch_to.window(self.browser.window_handles[0])
+
+        # google map to Sandy store
+        wait_for_element(self.browser, By.XPATH, "//a[@class='sc-brPMkR hVSHHp pf-42_ pf-button-4']").click()
+        time.sleep(10)
+        self.browser.switch_to.window(self.browser.window_handles[-1])
+        expected_url = "https://www.google.com/maps/place/Next+Adventure+Sandy+Outdoor+Store/"
+        actual_url = self.browser.current_url
+        assert expected_url in actual_url
+
+        self.browser.quit()
