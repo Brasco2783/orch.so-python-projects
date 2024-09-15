@@ -45,9 +45,9 @@ class TestNA:
         assert actual_results == expected_results
         sleep(10)
 
+  # test all direction buttons direct user to google maps page
+
   def test_google_maps_directions(self):
-        # test all direction buttons direct user to google maps page
-      
         # navigate to webpage
         self.browser.get('https://nextadventure.net/')
         
@@ -59,10 +59,9 @@ class TestNA:
         expected_url = "https://www.google.com/maps/place/Next+Adventure+Portland+Outdoor+Store/"
         actual_url = self.browser.current_url
         assert expected_url in actual_url
-
         self.browser.close()
         self.browser.switch_to.window(self.browser.window_handles[0])
-
+       
         # google map to PDX paddle sports
         wait_for_element(self.browser, By.XPATH, "//a[@class='sc-brPMkR hVSHHp pf-26_ pf-button-4']").click()
         time.sleep(10)
@@ -70,10 +69,9 @@ class TestNA:
         expected_url = "https://www.google.com/maps/place/Next+Adventure+Portland+Paddle+Sports+Center/"
         actual_url = self.browser.current_url
         assert expected_url in actual_url
-
         self.browser.close()
         self.browser.switch_to.window(self.browser.window_handles[0])
-
+        
         # google map to Scappoose paddle sports
         wait_for_element(self.browser, By.XPATH, "//a[@class='sc-brPMkR hVSHHp pf-34_ pf-button-4']").click()
         time.sleep(10)
@@ -81,10 +79,9 @@ class TestNA:
         expected_url = "https://www.google.com/maps/place/Next+Adventure+Scappoose+Bay+Paddle+Sports+Center/"
         actual_url = self.browser.current_url
         assert expected_url in actual_url
-
         self.browser.close()
         self.browser.switch_to.window(self.browser.window_handles[0])
-
+       
         # google map to Sandy store
         wait_for_element(self.browser, By.XPATH, "//a[@class='sc-brPMkR hVSHHp pf-42_ pf-button-4']").click()
         time.sleep(10)
@@ -92,5 +89,5 @@ class TestNA:
         expected_url = "https://www.google.com/maps/place/Next+Adventure+Sandy+Outdoor+Store/"
         actual_url = self.browser.current_url
         assert expected_url in actual_url
-
+        
         self.browser.quit()
