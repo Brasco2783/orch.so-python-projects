@@ -1,6 +1,6 @@
 
 
-# Frist code with Reusable login-to-orchestra import, Verifying 'New Project' text appears once project '+' icon button is clicked
+# Verify 'New Project' text appears once project '+' icon button is clicked
 
 
 
